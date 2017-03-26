@@ -25,3 +25,13 @@ function startGame(){
 		}
 		setMessage("It's" + document.turn + "'s turn!");
 	}
+
+
+	function check(a, b, c, move) {
+		var result = flase;
+		
+	}
+
+	function getBox(number) {
+		
+	}
