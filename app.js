@@ -18,6 +18,10 @@ function startGame(){
 	}
 
 	function switchTurn() {
+		if (checkForWinner(document.turn)) {
+			setMessage("Congratulations, " + document.turn + "| You win!");
+		}
+
 		if (document.turn =="X") {
 			document.turn = "O";
 		} else {
