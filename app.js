@@ -1,6 +1,9 @@
 function startGame(){
 		document.turn = "X";
-
+		if (Math.random() < 0.5) {
+			document.turn = "0";
+		}
+		document.winner = null;
 		setMessage(document.turn + " gets to start.");
 	}
 
@@ -9,7 +12,9 @@ function startGame(){
 	}
 
 	function nextMove(square) {
-		if (square.innerText === "") {
+		if (document.winner !== null) {
+			setMessage(document.winner + "already won the game. ");
+		} else if (square.innerText === "") {
 			square.innerText = document.turn;
 			switchTurn();
 		} else {
@@ -21,6 +26,7 @@ function startGame(){
 		
 		if (checkForWinner(document.turn)) {
 			setMessage("Congratulations, " + document.turn + "! You win!");
+			document.winner = document.turn;
 		} else if (document.turn == "X") {
 			document.turn = "O";
 			setMessage("It's" + document.turn + "'s turn!");
