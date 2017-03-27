@@ -26,9 +26,7 @@ function startGame(){
 		}
 	}
 
-	function changeColor() {
-		document.getElementById(square).addEventListener()
-	}
+	
 
 	function switchTurn() {
 		
