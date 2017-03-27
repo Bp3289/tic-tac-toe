@@ -3,8 +3,7 @@ function startGame(){
 	for (var i = 1; i <= 9; i= i + 1) {
 		clearBoard(i);
 	}
-
-		document.turn = "X";
+			document.turn = "X";
 		if (Math.random() < 0.5) {
 			document.turn = "0";
 		}
@@ -34,10 +33,10 @@ function startGame(){
 			document.winner = document.turn;
 		} else if (document.turn == "X") {
 			document.turn = "O";
-			setMessage("It's" + document.turn + "'s turn!");
+			setMessage("It's " + document.turn + " 's turn!");
 		} else {
 			document.turn = "X";
-			setMessage("It's" + document.turn + "'s turn!");
+			setMessage("It's " + document.turn + " 's turn!");
 		}
 	}
 
