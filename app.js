@@ -1,4 +1,9 @@
 function startGame(){
+
+	for (var i = 1; i <= 9; i= i + 1) {
+		clearBoard(i);
+	}
+
 		document.turn = "X";
 		if (Math.random() < 0.5) {
 			document.turn = "0";
@@ -55,4 +60,9 @@ function startGame(){
 
 	function getBox(number) {
 	return	document.getElementById("s" + number).innerText;
+	}
+
+
+	function clearBoard(number) {
+		document.getElementById("s" + number).innerText = "";
 	}
